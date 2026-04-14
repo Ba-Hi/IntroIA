@@ -10,6 +10,8 @@ def main():
     N = int(sys.argv[1])
 
     # [START model]
+
+    print(f"Solving {N}-queens no global constraints")
     model = cp_model.CpModel()
     if not model:
         print("Could not create model SAT")
@@ -56,6 +58,7 @@ def main():
 
 
     ######## modèle 2
+    print(f"\nSolving {N}-queens with global constraints")
     model2 = cp_model.CpModel()
     if not model:
         print("Could not create model SAT")
